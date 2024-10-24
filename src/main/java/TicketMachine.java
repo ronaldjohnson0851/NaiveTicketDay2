@@ -9,6 +9,7 @@
  * @author David J. Barnes and Michael Kolling
  * @version 2008.03.30
  */
+
 public class TicketMachine {
     // The price of a ticket from this machine.
     private Integer price;
@@ -30,6 +31,8 @@ public class TicketMachine {
         total = 0;
         ticketNumber = 0;
     }
+
+
 
     /**
      * Return the price of a ticket.
@@ -87,4 +90,19 @@ public class TicketMachine {
 
         return "Ticket price: " + price + " cents. " + "Your total is " + total + ".";
     }
+    public static void main(String[] args) {
+        TicketMachine Machine1 = new TicketMachine(20);
+        System.out.println(Machine1.getPrice());
+        System.out.println(Machine1.insertMoney(15));
+        System.out.println(Machine1.getBalance());
+        System.out.println(Machine1.printTicket());
+
+        TicketMachine Machine2 = new TicketMachine(30);
+        System.out.println(Machine2.getPrice());
+        System.out.println(Machine2.insertMoney(30));
+        System.out.println(Machine2.getBalance());
+        System.out.println(Machine2.printTicket());
+    }
+
+        public Student(String name)
 }
